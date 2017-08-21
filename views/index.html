@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to cuoStudio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body ng-app="cyh" ng-controller="cyhController">
+
+	<div class="loading">
+		<div class="loading-line"></div>
+		<!-- <div class="loading-mask"></div> -->
+	</div>
+<!-- NAV handMade-->
+	<nav class = "navbar navbar-default cuo-nav">
+		<div class="nav-above">
+			<div class="container-fluid cuo-nav-fix">
+				<div class="navbar-header">	
+			      	<a class="navbar-brand cuo-nav-brand cuo-nav-a cuo-nav-aa">MENU</a>
+			    </div>
+			    <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav navbar-right">
+				        <li><a href="#" class="cuo-nav-a cuo-nav-aa">HOME</a></li>
+				        <li><a id="nav-products" class="cuo-nav-a cuo-nav-aa">PRODUCTS</a></li>
+				       	<li><a class="cuo-nav-a cuo-nav-aa cuo-notes-alert">NOTES</a></li>
+				        <li><a id="nav-words" class="cuo-nav-a cuo-nav-aa">WORDS</a></li>
+			      	</ul>
+			    </div>
+			</div>
+		</div>
+		<div class="nav-mask"></div>
+
+	</nav>
+
+
+<!-- MENU handMade -->
+	<div class="cuo-menu">
+		<ul class="nav nav-stacked">
+			<li><div class="cuo-menu-space"></div></li>
+			<li><div class="cuo-menu-line"></div></li>
+			<li><div class="cuo-menu-space"></div></li>
+			<li><a id="menu-home" class="cuo-nav-a cuo-menu-text">home</a></li>
+			<li><a id="menu-about" class="cuo-nav-a cuo-menu-text">about</a></li>
+			<li><a id="menu-products" class="cuo-nav-a cuo-menu-text">products</a></li>
+			<li><div class="cuo-menu-space"></div></li>
+			<li><div class="cuo-menu-line"></div></li>
+			<li><div class="cuo-menu-space"></div></li>
+			<li><a id="menu-news" class="cuo-nav-a cuo-menu-text">news</a></li>
+			<li><a class="cuo-nav-a cuo-menu-text cuo-notes-alert">notes</a></li>
+			<li><a id="menu-words" class="cuo-nav-a cuo-menu-text">words</a></li>
+			<li><div class="cuo-menu-space"></div></li>
+			<li><div class="cuo-menu-line"></div></li>
+			<li><div class="cuo-menu-space"></div></li>
+			<li><a id="menu-contact" class="cuo-nav-a cuo-menu-text">contact</a></li>
+
+		</ul>
+		
+	</div>
+	
+	<div class="cuo-mask"></div>
+<!-- home -->
+
+	<div class="cuo-bar" id="home">
+		<img class="cuo-bg" src="lib/images/bg.jpg">
+		<div class="cuo-logo">
+			<h1>C<span>C</span>U<span>C</span>O</h1>
+			<h1>STUDIO</h1>
+		</div>
+		<div id="particles-js"></div>
+		
+	</div>
+<!-- about -->
+	<div class="cuo-bar" id="about">
+		<div class="cuo-about">
+			<img class="cuo-icon" src="lib/images/about.png">
+			<h1>ABOUT ME</h1>
+			<p>{{about[0].content}}</p>
+		</div>
+			
+	</div>
+
+<!-- porducts -->
+	<div class="cuo-bar" id="products">
+		<img class="cuo-bg" src="lib/images/pro.jpg">
+		<div class="cuo-products">
+			<h1>PRODUCTS</h1>
+			<div class="cuo-products-bars">
+				<div class="cuo-products-bar cuo-products-bar1" ng-repeat="z in pro">
+					<img src="{{z.img}}"/>
+					<div class="cuo-products-mask"></div>
+					<h3 id="h31">view more details</h3>
+					<h3 id="h32" style="display:none">go back</h3>
+					<div class="cuo-products-bar-2">
+						<p>{{z.content}}</p>
+					</div>
+					<h2>{{z.title}}</h2>
+				</div>
+
+			</div>
+			
+			<!-- <div class="cuo-products-bar cuo-products-bar2">
+				<img src="lib/images/p1.png">
+				<h2>cuoStudio</h2>
+			</div>
+			<div class="cuo-products-bar cuo-products-bar3">
+				<img src="lib/images/p1.png">
+				<h2>cuoStudio</h2>
+			</div> -->
+		</div>
+	</div>	
+
+<!-- news -->
+	<div class="cuo-bar" id="news">
+		<div class="cuo-news">
+			<img class="cuo-icon" src="lib/images/news.png">
+			<h1>NEWS</h1>
+			
+			<div class="cuo-news-bars">
+				
+				<div class="news-box news-show-box">
+					<div class="cuo-news-bar" ng-repeat="y in news" id="cuo-news-bar{{y.id}}" style="background: {{y.color}};">
+						<img src="{{y.img}}">
+						<h1>{{y.title}}</h1>
+						<h2>{{y.content}}</h2>
+						<p> {{y.date}}</p>
+						<!-- <p>{}</p> -->
+					</div>
+				</div>	
+
+<!-- 
+				<div class="news-box news-drop-box">
+					<div class="cuo-news-bar">
+						<img src=" ">
+						<h1>{{news[0].title}}</h1>
+						<h2>{{news[0].content}}</h2>
+						<p> {{news[0].date}}</p>
+					</div>
+				</div>	 -->
+
+
+
+			</div>
+
+			<div class="cuo-news-btns">
+				<div class="cuo-news-btn cuo-news-btn1"><p> < </p></div>
+				<div class="cuo-news-btn cuo-news-btn2"><p> > </p></div>
+			</div>
+		</div>
+			
+	</div>
+
+
+<!-- WORDS -->
+	<div class="cuo-bar" id="words">
+		<img class="cuo-bg cuo-words-bg" src="lib/images/words.jpg">
+
+		<div class="cuo-words">
+			<!-- <div class="cuo-words-mask"></div> -->
+			<h1>WORDS</h1>
+			<div class="cuo-words-bars">
+				
+				<!-- bar -->
+				<div class="cuo-words-bar-container">
+					<!-- <div class="cuo-words-bar"><h1>{{x.words}}</h1><p><span>{{x.date}}</span> by @{{x.name}}</p></div> -->
+				</div>
+
+
+				
+				<!-- <div class="cuo-words-add"><span class="glyphicon glyphicon-pencil"></span></div> -->
+			</div>
+			<!-- line -->
+			<!-- <div class="cuo-words-timeLine"></div>
+			<div class="cuo-words-btns">
+			<div class="cuo-words-btn cuo-words-btn1"><p> < </p></div>
+			<div class="cuo-words-btn cuo-words-btn2"><p> > </p></div> -->
+			</div>
+
+			<div class="cuo-words-add" data-toggle="modal" data-target="#myModal">
+				<span class="glyphicon glyphicon-pencil"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">Please Leave Your Words</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="cuo-words-modal-words input-group input-group-lg">
+							<label for="words">Your Words:</label>
+							<input id="modal-input-words" class="form-control" type="text" name="words">
+						</div>
+						<div class="cuo-words-modal-name input-group input-group-sm">
+							<label for="name">Your Name:</label>
+							<input id="modal-input-name" class="form-control" type="text" name="name">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" id="modal-save" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+<!-- CONTACT -->
+
+	<div class="cuo-bar" id="contact">
+		<div class="cuo-contact">
+			<img class="cuo-icon" src="lib/images/contact.png">
+			<h1>CONTACT ME</h1>
+			<p>twitter: stcyh</br>email: cuo2017@163.com</p>
+		</div>
+		
+	</div>
+
+<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="lib/angular/angular.js"></script>
+<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/moment/moment.js"></script>
+<script src="src/particles.min.js"></script>
+<script src="src/jquery.easing.min.js"></script>
+<script type="text/javascript" src="style.js"></script>
+<script type="text/javascript" src="myApp.js"></script>
+<script type="text/javascript" src="src/particles.min.js"></script>
+<script type="text/javascript" src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "cuostudio",
+  "description": "Serious this is my first web, and my first time as a full-stack web developer",
+  "main": "index.html",
+  "authors": [
+    "cyh"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Studio"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.5",
+    "moment": "^2.18.1"
+  }
+}

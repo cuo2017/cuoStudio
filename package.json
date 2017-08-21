@@ -1,0 +1,21 @@
+{
+  "name": "cuostudio",
+  "version": "1.0.0",
+  "description": "Serious this is my first web, and my first time as a full-stack web developer ",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Studio"
+  ],
+  "author": "cyh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "mongoose": "^4.11.5"
+  },
+  "devDependencies": {}
+}
