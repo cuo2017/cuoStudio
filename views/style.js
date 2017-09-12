@@ -510,8 +510,3 @@ $('.cuo-words-btn1').click(function(event) {
 
 
 
-// nodes-alert
-$('.cuo-notes-alert').click(function(event) {
-	/* Act on the event */
-	alert('Still working on this. Please wait and you will get your surprise.')
-});

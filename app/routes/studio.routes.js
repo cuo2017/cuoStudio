@@ -57,4 +57,12 @@ module.exports = function(app){
 	app.route('/cWords')
 	.get(StudioController.clearWords);
 
+//notes
+	app.route('/aNotes')
+	.get(StudioController.addNotes);
+	app.route('/gNotes')
+	.get(StudioController.getNotes);
+	app.route('cNotes')
+	.get(StudioController.clearNotes); 
+
 };

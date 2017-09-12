@@ -5,6 +5,7 @@ var About = mongoose.model('about');
 var Pro = mongoose.model('pro');
 var News = mongoose.model('news');
 var Words = mongoose.model('words');
+var Notes = mongoose.model('notes');
 
 module.exports = {
 	// test
@@ -186,4 +187,30 @@ module.exports = {
 			return res.json(docs);
 		});
 	},
+
+// notes
+	addNotes: function(req, res, next){
+		var notes = new Note(req.body);
+		notes.save(function(err, docs){
+			return res.json(docs);
+		});
+	},
+	// updateNotes: function(req, res, next){
+	// 	Notes.update()
+	// },
+	// deleteNotes: function(req,res,next){
+	// 	var 
+	// },	
+	clearNotes: function(req,res,next){
+		Notes.remove(function(err,docs){
+			console.log('remove all Notes!');
+			return res.json(docs);
+		});
+	},
+	getNotes: function(req,res,next){
+		Notes.find().exec(function(err, docs){
+			return res.json(docs);
+		});
+	}
+	// findNotes
 };

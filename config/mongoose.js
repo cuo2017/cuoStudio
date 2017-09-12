@@ -8,6 +8,7 @@ module.exports = function(){
 	require('../app/models/product.model');
 	require('../app/models/news.model');
 	require('../app/models/words.model');
+	require('../app/models/notes.model');
 
 	return db;
  };
